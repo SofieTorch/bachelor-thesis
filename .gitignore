@@ -18,9 +18,6 @@
 *.snm
 *.vrb
 
-# Output PDF
-*.pdf
-
 # Editor backups
 *~
 *.swp
