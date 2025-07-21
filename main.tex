@@ -1,22 +1,63 @@
-\documentclass[12pt]{article}
+\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{amsmath,graphicx}
+\usepackage[
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=2cm
+]{geometry} % control de márgenes
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage[absolute,overlay]{textpos}
+\renewcommand{\familydefault}{\sfdefault} % usar fuente sans serif
 
-\title{Modificación de CPython para Primeros Aprendices de Programación en Español}
-\author{Sofía}
-\date{Julio 2025}
+\pagestyle{empty} % sin número de página
 
 \begin{document}
+\begin{center}
+    % Logo y universidad
+    \vspace*{1cm}
+    \begin{textblock*}{2.5cm}(3cm, 2.5cm) % {width} (x, y)
+        \includegraphics[width=2.5cm]{images/univalle.png}
+    \end{textblock*}
 
-\maketitle
+    \textbf{\LARGE UNIVERSIDAD DEL VALLE}\\[0.3cm]
+    \textbf{\large FACULTAD DE INFORMÁTICA Y ELECTRÓNICA}\\[0.2cm]
+    \textbf{\large CARRERA DE INGENIERÍA DE SISTEMAS INFORMÁTICOS}\\[1.5cm]
 
-\begin{abstract}
-Este proyecto busca adaptar el lenguaje Python al español...
-\end{abstract}
+    % Título
+    \begin{minipage}{0.9\textwidth}
+        \centering
+        \textbf{\large IMPLEMENTACIÓN DEL INTÉRPRETE DE PYTHON A ESPAÑOL BASADO EN EL CONTENIDO DE LA CURRÍCULA DE LA MATERIA DE PROGRAMACIÓN I PARA FACILITAR EL APRENDIZAJE DE LA LÓGICA DE PROGRAMACIÓN}
+    \end{minipage}\\[1.5cm]
 
-\section{Introducción}
 
-...
+    % Proyecto de grado
+    \noindent\makebox[\textwidth][c]{
+        \hspace{0.5\textwidth}
+        \begin{minipage}[t]{0.5\textwidth}
+            \raggedright
+            PERFIL DE PROYECTO DE GRADO PARA\\
+            OPTAR AL TÍTULO DE LICENCIATURA EN\\
+            INGENIERÍA DE SISTEMAS INFORMÁTICOS
+        \end{minipage}
+    }\\[1.5cm]
+
+    % Postulante y tutor
+    \textbf{POSTULANTE:} SOFIA VALERIA TORO CHAMBI\\[0.15cm]
+    \textbf{TUTOR:} ING. \\[2cm]
+
+    % Ciudad, país, año
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        Cochabamba – Bolivia\\
+        2025
+    \end{minipage}\\[0.8cm]
+
+\end{center}
 
 \end{document}
