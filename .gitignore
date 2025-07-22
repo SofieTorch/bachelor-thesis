@@ -17,6 +17,7 @@
 *.nav
 *.snm
 *.vrb
+*.run.xml
 
 # Editor backups
 *~
