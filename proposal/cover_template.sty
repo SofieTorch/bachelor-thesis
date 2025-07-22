@@ -18,15 +18,16 @@
 \RequirePackage{lmodern}
 \RequirePackage{helvet}
 \RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{fancyhdr}
 
 % Font
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 
 % Remove page number
 \pagestyle{empty}
 
 % Variables (default empty)
-\newcommand{\univallelogo}{images/univalle.png}
+\newcommand{\univallelogo}{../images/univalle.png}
 \newcommand{\universityname}{Universidad del Valle}
 \newcommand{\facultyname}{Facultad de Informática y Electrónica}
 \newcommand{\degreename}{Carrera de Ingeniería de Sistemas Informáticos}
@@ -54,7 +55,7 @@
     \vspace*{0.5cm}
     % Logo
     \begin{textblock*}{2.5cm}(3cm, 2.5cm)
-        \includegraphics[width=2.5cm]{images/univalle.png}
+        \includegraphics[width=2.5cm]{../images/univalle.png}
     \end{textblock*}
 
     % University Info
