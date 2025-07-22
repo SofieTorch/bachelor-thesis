@@ -1,69 +1,16 @@
-\documentclass[letterpaper,11pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[
-    top=2.5cm,
-    bottom=2.5cm,
-    left=3cm,
-    right=2cm
-]{geometry} % control de márgenes
-\usepackage{tikz}
-\usepackage{setspace}
-\usepackage{graphicx}
-\usepackage{titlesec}
-\usepackage{lmodern}
-\usepackage{helvet}
-\usepackage[absolute,overlay]{textpos}
-\renewcommand{\familydefault}{\sfdefault}
+\documentclass[11pt,letterpaper]{article}
+\usepackage{packages/cover_template}
 
-\pagestyle{empty} % sin número de página
+\setauthorname{Sofia Valeria Toro Chambi}
+\settutorname{Ing. Joel Alanez}
+\setthesistitle{
+    IMPLEMENTACIÓN DEL INTÉRPRETE DE PYTHON A ESPAÑOL
+    BASADO EN EL CONTENIDO DE LA CURRÍCULA DE LA MATERIA DE PROGRAMACIÓN I
+    PARA FACILITAR EL APRENDIZAJE DE LA LÓGICA DE PROGRAMACIÓN
+}
 
 \begin{document}
-\begin{center}
-    % Logo y universidad
-    \vspace*{0.6cm}
-    \begin{textblock*}{2.5cm}(3cm, 2.5cm) % {width} (x, y)
-        \includegraphics[width=2.5cm]{images/univalle.png}
-    \end{textblock*}
 
-    \textbf{\LARGE UNIVERSIDAD DEL VALLE}\\[0.2cm]
-    \textbf{\large FACULTAD DE INFORMÁTICA Y ELECTRÓNICA}\\[0.2cm]
-    \textbf{\large CARRERA DE INGENIERÍA DE SISTEMAS INFORMÁTICOS}\\[4cm]
-
-    % Título
-    \begin{minipage}{1\textwidth}
-        \centering
-        \singlespacing
-        \Large
-        \textbf{IMPLEMENTACIÓN DEL INTÉRPRETE DE PYTHON A ESPAÑOL BASADO EN EL CONTENIDO DE LA CURRÍCULA DE LA MATERIA DE PROGRAMACIÓN I PARA FACILITAR EL APRENDIZAJE DE LA LÓGICA DE PROGRAMACIÓN}
-    \end{minipage}\\[5cm]
-
-
-    % Proyecto de grado
-    \noindent\makebox[\textwidth][c]{
-        \hspace{0.5\textwidth}
-        \begin{minipage}[t]{0.5\textwidth}
-            \raggedright
-            \onehalfspacing
-            PERFIL DE PROYECTO DE GRADO PARA\\
-            OPTAR AL TÍTULO DE LICENCIATURA EN\\
-            INGENIERÍA DE SISTEMAS INFORMÁTICOS
-        \end{minipage}
-    }\\[2cm]
-
-    % Postulante y tutor
-    \textbf{POSTULANTE:} SOFIA VALERIA TORO CHAMBI\\[0.15cm]
-    \textbf{TUTOR:} ING. JOEL ALANEZ\\[2cm]
-
-    \vfill
-
-    % Ciudad, país, año
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \onehalfspacing
-        Cochabamba - Bolivia\\
-        2025
-    \end{minipage}
-
-\end{center}
+\makecover
 
 \end{document}

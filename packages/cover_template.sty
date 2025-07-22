@@ -1,0 +1,103 @@
+% cover_template.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cover_template}[2025/07/21 Cover Template]
+
+% Required packages
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{geometry}
+\geometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=2cm
+}
+\RequirePackage{tikz}
+\RequirePackage{setspace}
+\RequirePackage{graphicx}
+\RequirePackage{titlesec}
+\RequirePackage{lmodern}
+\RequirePackage{helvet}
+\RequirePackage[absolute,overlay]{textpos}
+
+% Font
+\renewcommand{\familydefault}{\sfdefault}
+
+% Remove page number
+\pagestyle{empty}
+
+% Variables (default empty)
+\newcommand{\univallelogo}{images/univalle.png}
+\newcommand{\universityname}{Universidad del Valle}
+\newcommand{\facultyname}{Facultad de Informática y Electrónica}
+\newcommand{\degreename}{Carrera de Ingeniería de Sistemas Informáticos}
+\newcommand{\thesistitle}{}
+\newcommand{\thesisdesc}{PERFIL DE PROYECTO DE GRADO PARA\\ OPTAR AL TÍTULO DE LICENCIATURA EN\\ INGENIERÍA DE SISTEMAS INFORMÁTICOS}
+\newcommand{\authorname}{}
+\newcommand{\tutorname}{}
+\newcommand{\location}{Cochabamba - Bolivia}
+
+% Setters
+\newcommand{\setunivallelogo}[1]{\renewcommand{\univallelogo}{#1}}
+\newcommand{\setuniversityname}[1]{\renewcommand{\universityname}{#1}}
+\newcommand{\setfacultyname}[1]{\renewcommand{\facultyname}{#1}}
+\newcommand{\setdegreename}[1]{\renewcommand{\degreename}{#1}}
+\newcommand{\setthesistitle}[1]{\renewcommand{\thesistitle}{#1}}
+\newcommand{\setthesisdesc}[1]{\renewcommand{\thesisdesc}{#1}}
+\newcommand{\setauthorname}[1]{\renewcommand{\authorname}{#1}}
+\newcommand{\settutorname}[1]{\renewcommand{\tutorname}{#1}}
+\newcommand{\setlocation}[1]{\renewcommand{\location}{#1}}
+\newcommand{\setyear}[1]{\renewcommand{\year}{#1}}
+
+% Main title page command
+\newcommand{\makecover}{
+\begin{center}
+    \vspace*{0.5cm}
+    % Logo
+    \begin{textblock*}{2.5cm}(3cm, 2.5cm)
+        \includegraphics[width=2.5cm]{images/univalle.png}
+    \end{textblock*}
+
+    % University Info
+    \begin{minipage}{1\textwidth}
+        \centering
+        \onehalfspacing
+        \textbf{\MakeUppercase{
+            \LARGE{\universityname}\\
+            \large{\facultyname}\\
+            \large{\degreename}\\
+        }}
+    \end{minipage}
+    \vspace{4cm}
+
+    % Thesis Title
+    \begin{minipage}{1\textwidth}
+        \centering
+        \singlespacing
+        \Large
+        \textbf{\thesistitle}
+    \end{minipage}
+    \vspace{4cm}
+
+    % Description
+    \noindent\makebox[\textwidth][c]{
+        \hspace{0.5\textwidth}
+        \begin{minipage}[t]{0.5\textwidth}
+            \raggedright
+            \onehalfspacing
+            \thesisdesc
+        \end{minipage}
+    }
+    \vspace{2cm}
+
+    % Author and Tutor
+    \MakeUppercase{\textbf{Postulante:} \authorname}\\
+    \MakeUppercase{\textbf{Tutor:} \tutorname}
+    \vfill
+
+    % Location and Year
+    \centering
+    \onehalfspacing
+    \location\\
+    \the\year
+\end{center}
+}
